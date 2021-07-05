@@ -6,7 +6,7 @@ namespace lojinha_e2e.unit.test
     public class HelperTest
     {
         [Test]
-        public void SomaValorInteiroTest()
+        public void SomaValorPositivoTest()
         {
             Helper helper = new Helper();
             int resultado = helper.SomaValor(2, 3);

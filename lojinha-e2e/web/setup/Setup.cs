@@ -13,7 +13,6 @@ namespace lojinha_e2e.web.setup
         [SetUp]
         public IWebDriver StartBrowser()
         {
-            // System.Environment.SetEnvironmentVariable("webdriver.chrome.driver", Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName) + @"\chromedriver\chromedriver.exe");
             _browser = new ChromeDriver(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName) + @"\chromedriver\");
 
             _browser.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);

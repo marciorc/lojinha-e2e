@@ -1,8 +1,9 @@
 using Newtonsoft.Json.Linq;
 using RestSharp;
 using NUnit.Framework;
+using lojinha_e2e.api.modulos;
 
-namespace lojinha_e2e
+namespace lojinha_e2e.api
 {
     public class LoginComAdmin
     {
@@ -10,7 +11,8 @@ namespace lojinha_e2e
         public void RealizaLoginComUserAdmin()
         {
             // Arrange
-            var client = new RestClient("http://165.227.93.41/lojinha");
+            BaseRest baseRest = new BaseRest();
+            var client = baseRest.baseApiRest();
 
             var request = new RestRequest("/v2/login", Method.POST);
             //request.AddHeader("Content-Type", "application/json");
